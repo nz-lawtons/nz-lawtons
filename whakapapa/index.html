@@ -1,1 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Whakapapa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Select Dad’s (Lawton) or Mum’s (Wright) side to explore Whakapapa." />
+  <style>
+    :root {
+      --bg:#0e1117; --panel:#161b22; --text:#e6edf3; --muted:#9fb0c0; --border:#30363d;
+      --accent-lawton:#2f81f7; /* blue */
+      --accent-wright:#7ee787; /* green */
+    }
+    html,body{
+      margin:0; padding:0; background:var(--bg); color:var(--text);
+      font-family:system-ui,-apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.6;
+    }
+    header{ text-align:center; padding:2.5rem 1rem 1rem; }
+    header h1{ margin:0 0 .3rem; font-size:clamp(1.8rem, 2.2vw + 1rem, 2.6rem); }
+    header p{ margin:.25rem 0 0; color:var(--muted); }
+    .grid{
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+      gap:1rem; padding:1rem; max-width:1000px; margin:0 auto 2rem;
+    }
+    .card{
+      background:var(--panel); border:1px solid var(--border); border-radius:12px;
+      padding:1.25rem; text-decoration:none; color:var(--text);
+      display:flex; flex-direction:column; min-height:160px;
+      transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .card:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.25); }
+    .card h2{ margin:0 0 .5rem; font-size:1.35rem; }
+    .card p{ margin:0; color:var(--muted); }
+    .lawton{ border-left:6px solid var(--accent-lawton); }
+    .wright{ border-left:6px solid var(--accent-wright); }
+    .back{ text-align:center; margin:1.25rem 0 2rem; }
+    .back a{ color:#8ab4ff; text-decoration:none; }
+    .back a:hover{ text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Whakapapa</h1>
+    <p>Select Dad’s side (Lawton) or Mum’s side (Wright)</p>
+  </header>
 
+  <main class="grid" aria-label="Whakapapa choices">
+    <!-- Dad's side -->
+    ./lawton/
+      <div>
+        <h2>Lawton — Dad’s Side</h2>
+        <p>Whakapapa information for the Lawton line.</p>
+      </div>
+    </a>
+
+    <!-- Mum's side -->
+    ./wright/
+      <div>
+        <h2>Wright — Mum’s Side</h2>
+        <p>Whakapapa information for the Wright line.</p>
+      </div>
+    </a>
+  </main>
+
+  <div class="back">
+    ../← Back to Homepage</a>
+  </div>
+</body>
+</html>
